@@ -4,9 +4,9 @@ import './FreelancerPriceSimulator.css';
 
 const FreelancerPriceSimulator = () => {
   const [initialPrice, setInitialPrice] = useState(1000);
-  const [newPrice, setNewPrice] = useState(2500);
-  const [potentialProjectsPerYear, setPotentialProjectsPerYear] = useState(30);
-  const [currentConversionRate, setCurrentConversionRate] = useState(40);
+  const [newPrice, setNewPrice] = useState(1950);
+  const [potentialProjectsPerYear, setPotentialProjectsPerYear] = useState(15);
+  const [currentConversionRate, setCurrentConversionRate] = useState(50);
   const [newConversionRate, setNewConversionRate] = useState(80);
   const [yearlyRequestGrowth, setYearlyRequestGrowth] = useState(10);
   const [yearlyPriceGrowth, setYearlyPriceGrowth] = useState(5);
@@ -198,11 +198,9 @@ const FreelancerPriceSimulator = () => {
     <div className="calculator-container">
       {/* Header */}
       <div className="header">
-        <h1 className="main-title">Calcolatore Strategia di Pricing</h1>
+        <h1 className="main-title">Simulatore Strategia di Pricing</h1>
         <p className="subtitle">
-          Scopri subito quanto puoi guadagnare in più con la strategia giusta! <br></br>
-          
-           (Inserisci i tuoi parametri nel calcolatore)
+          Scopri l'impatto dell'aumento dei prezzi sui tuoi guadagni da freelance.
         </p>
       </div>
       
@@ -215,7 +213,7 @@ const FreelancerPriceSimulator = () => {
           {/* Potential projects */}
           <div className="form-group">
             <label className="form-label">
-            Quanti preventivi invii all’anno?
+              Totale preventivi inviati all'anno
             </label>
             <input
               type="number"
@@ -239,13 +237,13 @@ const FreelancerPriceSimulator = () => {
           {/* Current situation */}
           <div className="section-divider">
             <h3 className="section-title">
-              La tua Situazione Attuale
+              Situazione Attuale
             </h3>
             
             <div className="mobile-specific-grid">
               <div className="form-group">
                 <label className="form-label">
-                Il tuo prezzo medio oggi (€) <span className='hidden'>Dummy Text Lalalala</span>
+                  Prezzo attuale (€) <span className='hidden'>Dummy Text Lalalala</span>
                 </label>
                 <input
                   type="number"
@@ -269,7 +267,7 @@ const FreelancerPriceSimulator = () => {
               
               <div className="form-group">
                 <label className="form-label">
-                Il tuo tasso di conversione medio (%)
+                  Tasso di conversione attuale (%)
                 </label>
                 <input
                   type="number"
@@ -296,13 +294,13 @@ const FreelancerPriceSimulator = () => {
           {/* New strategy */}
           <div className="section-divider">
             <h3 className="section-title">
-              La tua Nuova Strategia
+              Nuova Strategia
             </h3>
             
             <div className="mobile-specific-grid">
               <div className="form-group">
                 <label className="form-label">
-                  Nuovo medio prezzo (€) <span className='hidden'>Dummy Text Lalalala</span>
+                  Nuovo prezzo (€) <span className='hidden'>Dummy Text Lalalala</span>
                 </label>
                 <input
                   type="number"
@@ -326,7 +324,7 @@ const FreelancerPriceSimulator = () => {
               
               <div className="form-group">
                 <label className="form-label">
-                  Nuovo tasso di conversione medio (%)
+                  Nuovo tasso di conversione previsto (%)
                 </label>
                 <input
                   type="number"
@@ -350,7 +348,7 @@ const FreelancerPriceSimulator = () => {
               
               <div className="form-group mobile-full-width">
                 <label className="form-label">
-                Quanto stai aumentando il tuo prezzo (%)
+                  Aumento (%)
                 </label>
                 <input
                   type="number"
@@ -385,7 +383,7 @@ const FreelancerPriceSimulator = () => {
         {/* Main Delta */}
         <div className="main-delta">
           <h3 className="result-title">
-          Ecco quanto guadagni in più ogni anno!
+            QUANTO GUADAGNI IN PIÙ ALL'ANNO
           </h3>
           <div className="main-delta-value-container">
             <p className="main-delta-value">
@@ -507,7 +505,7 @@ const FreelancerPriceSimulator = () => {
         {/* Graph Section */}
         <div className="graph-section">
           <h3 className="graph-title">
-            L'Impatto della tua Nuova Strategia negli Anni
+            EVOLUZIONE DEL FATTURATO ANNUALE
           </h3>
           
           <div className="graph-container">
@@ -539,7 +537,7 @@ const FreelancerPriceSimulator = () => {
                     fontWeight: 600
                   }}
                   formatter={(value, entry) => {
-                    const color = value === "Nuova Strategia" ? "#19FF24" : "#ff0000";
+                    const color = value === "Nuova Strategia" ? "#19FF24" : "#6B7280";
                     return <span style={{ color: color }}>{value}</span>;
                   }}
                 />
@@ -547,7 +545,7 @@ const FreelancerPriceSimulator = () => {
                   type="monotone" 
                   dataKey="vecchiaStrategia" 
                   name="Vecchia Strategia" 
-                  stroke="#ff0000" 
+                  stroke="#6B7280" 
                   strokeWidth={2}
                   activeDot={{ r: 8 }} 
                 />
@@ -626,13 +624,13 @@ const FreelancerPriceSimulator = () => {
           Sei pronto a trasformare il tuo business con il pricing del conquistatore?
         </h2>
         <p className="cta-description">
-          Questo calcolatore ti ha mostrato un'anteprima dell'impatto che una strategia di pricing può avere sulla tua carriera.
+          Questo simulatore ti ha mostrato solo un'anteprima dell'impatto che una strategia di pricing può avere sulla tua carriera.
         </p>
-        <a href="https://www.darioalbini.com/corso-il-pricing-del-conquistatore/#pricing" className="cta-button">
-          SCOPRI PRICING DEL CONQUISTATORE
+        <a href="https://www.darioalbini.com/corso-il-pricing-del-conquistatore/#calcolatore" className="cta-button">
+          SCOPRI IL CORSO ABC PRICING
         </a>
         <p className="cta-summary">
-          Investire oggi nella tua strategia di pricing oggi potrebbe valere 
+          Investire nella tua strategia di pricing oggi potrebbe valere 
           <span className="highlight-value"> {formatCurrency(comparisons.length > 0 ? comparisons[4]?.cumulativeDifference || 0 : 0)}</span>
           {" "}nei prossimi cinque anni!
         </p>
